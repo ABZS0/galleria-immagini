@@ -13,11 +13,20 @@ body {
 }
 
 .gallery img {
-    max-width: 100%;  /* L'immagine non supererà mai la larghezza del contenitore */
-    height: auto;     /* Mantiene le proporzioni */
-    display: block;   /* Evita spazi indesiderati sotto l'immagine */
-    margin: 0 auto;   /* Centra l'immagine */
-    margin-bottom: 20px;
+    width: 100%; /* L'immagine occuperà il 100% della larghezza del contenitore */
+    max-width: 500px; /* Limita la dimensione massima su schermi grandi */
+    height: auto; /* Mantiene le proporzioni */
+    display: block;
+    margin: 0 auto 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* Miglioriamo ancora con i media queries per mobile */
+@media (max-width: 600px) {
+    .gallery img {
+        width: 90%; /* Riduce un po' l'immagine su schermi piccoli */
+        max-width: none; /* Rimuove il limite massimo */
+    }
+}
+
