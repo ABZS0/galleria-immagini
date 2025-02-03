@@ -13,8 +13,10 @@ body {
 }
 
 .gallery img {
-    max-width: 100%;
-    height: auto;
+    max-width: 100%;  /* L'immagine non supererà mai la larghezza del contenitore */
+    height: auto;     /* Mantiene le proporzioni */
+    display: block;   /* Evita spazi indesiderati sotto l'immagine */
+    margin: 0 auto;   /* Centra l'immagine */
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
